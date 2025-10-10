@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +13,22 @@
         .demo-section {
             margin: var(--spacing-lg) 0;
         }
+
         .demo-title {
             margin-bottom: var(--spacing-md);
             font-size: 1.5rem;
             font-weight: 600;
         }
+
         body {
-            padding-top: 80px; /* Account for fixed appbar */
-            padding-bottom: 80px; /* Account for fixed footer */
+            padding-top: 80px;
+            /* Account for fixed appbar */
+            padding-bottom: 80px;
+            /* Account for fixed footer */
         }
     </style>
 </head>
+
 <body>
     <!-- App Bar -->
     <s-appbar>
@@ -36,34 +42,34 @@
         </s-toolbar>
     </s-appbar>
 
-    <!-- Main Content -->
     <s-container>
-        <!-- Hero Section -->
         <header>
-            <h1>Welcome to Silky Looks</h1>
-            <p>A modern, semantic, responsive CSS framework with custom elements and beautiful theming</p>
+            <s-column>
+                <h1>Welcome to Silky Looks</h1>
+                <p>A modern, semantic, responsive CSS framework</p>
+            </s-column>
         </header>
 
-        <!-- Cards Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Cards & Layout</h2>
+        <section>
+            <h2>Cards & Layout</h2>
             <s-row wrap>
                 <s-card style="flex: 1; min-width: 280px;">
                     <h3>Feature Card</h3>
-                    <p text="muted">This is a sample card demonstrating the s-card component with automatic theming support.</p>
+                    <p text="muted">This is a sample card demonstrating the s-card component with automatic theming
+                        support.</p>
                     <button>Learn More</button>
                 </s-card>
                 <s-card style="flex: 1; min-width: 280px;">
                     <h3>Another Card</h3>
-                    <p text="muted">Cards support both light and dark themes automatically based on user preferences.</p>
+                    <p text="muted">Cards support both light and dark themes automatically based on user preferences.
+                    </p>
                     <button variant="outlined">Explore</button>
                 </s-card>
             </s-row>
-        </div>
+        </section>
 
-        <!-- Grid Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Grid System</h2>
+        <section>
+            <h2>Grid System</h2>
             <s-grid columns="3">
                 <s-card>
                     <h4>Grid Item 1</h4>
@@ -78,11 +84,17 @@
                     <p>Perfect for dashboard layouts</p>
                 </s-card>
             </s-grid>
-        </div>
+        </section>
 
-        <!-- Form Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Form Elements</h2>
+        <section>
+            <h2>Form Elements</h2>
+            <s-toolbar>
+                <s-button-group>
+                    <button class="active">Icon</button>
+                    <button>Card</button>
+                </s-button-group>
+            </s-toolbar>
+
             <s-card>
                 <s-column>
                     <div>
@@ -105,11 +117,10 @@
                     </s-row>
                 </s-column>
             </s-card>
-        </div>
+        </section>
 
-        <!-- Notifications Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Notifications</h2>
+        <section>
+            <h2>Notifications</h2>
             <s-gap>
                 <s-notification style="background-color: var(--color-success); color: white;">
                     ✅ Success! Your changes have been saved.
@@ -121,11 +132,10 @@
                     ℹ️ Info: This is an informational message.
                 </s-notification>
             </s-gap>
-        </div>
+        </section>
 
-        <!-- Badges Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Badges & Buttons</h2>
+        <section>
+            <h2>Badges & Buttons</h2>
             <s-row wrap>
                 <button>
                     Messages
@@ -140,11 +150,10 @@
                     <s-badge>5</s-badge>
                 </button>
             </s-row>
-        </div>
+        </section>
 
-        <!-- Responsive Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Responsive Utilities</h2>
+        <section>
+            <h2>Responsive Utilities</h2>
             <s-row wrap-mobile>
                 <s-card grow>
                     <h4 for-desktop>Desktop Only</h4>
@@ -158,11 +167,26 @@
                     </div>
                 </s-card>
             </s-row>
-        </div>
+        </section>
 
-        <!-- Spacing Demo -->
-        <div class="demo-section">
-            <h2 class="demo-title">Spacing & Layout</h2>
+        <section>
+            <h2>Theme switch</h2>
+            <s-row>
+                <s-card theme="dark">
+                    <h3>Dark Themed Card</h3>
+                    <p text="muted">This card uses the dark theme explicitly.</p>
+                    <button>Learn More</button>
+                </s-card>
+                <s-card theme="light">
+                    <h3>Light Themed Card</h3>  
+                    <p text="muted">This card uses the light theme explicitly.</p>
+                    <button>Learn More</button>
+                </s-card>
+            </s-row>
+        </section>
+
+        <section>
+            <h2>Spacing & Layout</h2>
             <s-card>
                 <s-column>
                     <div>Column layout with consistent spacing</div>
@@ -174,37 +198,37 @@
                     </s-row>
                 </s-column>
             </s-card>
-        </div>
+        </section>
     </s-container>
 
-    <!-- Footer -->
     <footer>
         <p text="muted">© 2025 Silky CSS Framework. Built with ❤️ for modern web development.</p>
     </footer>
 
     <script>
         // Demo script for interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add some interactivity to buttons
-            const buttons = document.querySelectorAll('button');
+            const buttons = document.querySelectorAll('button')
             buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
+                button.addEventListener('click', function (e) {
                     if (this.textContent.includes('Submit')) {
-                        e.preventDefault();
-                        alert('Form submitted! (This is just a demo)');
+                        e.preventDefault()
+                        alert('Form submitted! (This is just a demo)')
                     }
-                });
-            });
+                })
+            })
 
             // Theme detection demo
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            console.log(`Current theme: ${isDark ? 'Dark' : 'Light'}`);
-            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            console.log(`Current theme: ${isDark ? 'Dark' : 'Light'}`)
+
             // Listen for theme changes
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                console.log(`Theme changed to: ${e.matches ? 'Dark' : 'Light'}`);
-            });
-        });
+                console.log(`Theme changed to: ${e.matches ? 'Dark' : 'Light'}`)
+            })
+        })
     </script>
 </body>
+
 </html>
