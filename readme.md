@@ -4,7 +4,7 @@ Silky Looks is a modern, responsive CSS framework that uses custom HTML elements
 
 ## Installation
 ```css
-@import url('https://silkyteam.silky.dev/looks/good.css');
+@import url('https://silky-dot-dev.github.io/looks/good.css');
 ```
 
 ## Key Features
