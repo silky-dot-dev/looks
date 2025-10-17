@@ -1,0 +1,21 @@
+{
+  "name": "looks",
+  "version": "1.0.0",
+  "description": "Silky Looks is a modern, responsive CSS framework that uses custom HTML elements (components) to provide a clean and consistent design system. It features automatic dark/light theme support and a comprehensive set of layout and UI components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silky-dot-dev/looks.git"
+  },
+  "keywords": [],
+  "author": "Silky Team",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/silky-dot-dev/looks/issues"
+  },
+  "homepage": "https://github.com/silky-dot-dev/looks#readme"
+}

@@ -43,12 +43,35 @@
     </s-appbar>
 
     <s-container>
-        <header>
+        <s-hero>
             <s-column>
                 <h1>Welcome to Silky Looks</h1>
                 <p>A modern, semantic, responsive CSS framework</p>
             </s-column>
-        </header>
+        </s-hero>
+
+        <section>
+            <h2>Semantic tags</h2>
+            <article>
+                <main>
+                    <header>Header</header>
+                    <nav>Navigation</nav>
+                    <section>
+                        <article>
+                            <h3>Article Title</h3>
+                            <p>This is a minimal example using semantic tags.</p>
+                            <figure>
+                                <img src="logo.svg" alt="Example image" style="height: 40px;">
+                                <figcaption>Logo example</figcaption>
+                            </figure>
+                            <mark>Highlighted text</mark>
+                            <time datetime="2025-01-01">Jan 1, 2025</time>
+                        </article>
+                        <aside>Sidebar content</aside>
+                    </section>
+                    <footer>Footer</footer>
+                </main>
+        </section>
 
         <section>
             <h2>Cards & Layout</h2>
@@ -178,7 +201,7 @@
                     <button>Learn More</button>
                 </s-card>
                 <s-card theme="light">
-                    <h3>Light Themed Card</h3>  
+                    <h3>Light Themed Card</h3>
                     <p text="muted">This card uses the light theme explicitly.</p>
                     <button>Learn More</button>
                 </s-card>

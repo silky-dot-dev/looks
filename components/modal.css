@@ -1,0 +1,121 @@
+s-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+s-modal--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+s-modal::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+s-modal-content {
+  background-color: var(--color-background);
+  border-radius: 8px; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 32px); 
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 100%;
+}
+
+s-modal--visible s-modal__content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+s-modal__content--sm {
+  max-width: 400px;
+}
+
+s-modal__content--md {
+  max-width: 550px;
+}
+
+s-modal__content--lg {
+  max-width: 700px;
+}
+
+s-modal__content--xl {
+  max-width: 900px;
+}
+
+s-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px; 
+  border-bottom: 1px solid #e5e7eb;
+}
+
+s-modal-title {
+  margin: 0;
+  font-size: 1.125rem; 
+  font-weight: 600; 
+}
+
+s-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 4px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.15s ease;
+}
+
+s-modal__close:hover {
+  color: #1f2937;
+}
+
+s-modal-body {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+s-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  gap: 8px;
+}
+
+@media (max-width: 640px) {
+  s-modal__content {
+    max-height: calc(100vh - 16px);
+  }
+
+  s-modal__content--sm,
+  s-modal__content--md,
+  s-modal__content--lg,
+  s-modal__content--xl {
+    max-width: 100%;
+  }
+}

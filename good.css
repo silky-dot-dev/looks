@@ -1,15 +1,14 @@
-/* version: 10 Oct 25 */
+/* version: 17 Oct 25 */
 
 :root {
   /* Common spacing and sizing variables that don't change between themes */
   --border-radius: 14px;
-
   --spacing-s: 5px;
   --spacing-m: 10px;
   --spacing-l: 20px;
-
   --padding: 10px;
   --border: 1px solid #55555543;
+  --main-width: 1000px;
 }
 
 :root {
@@ -58,6 +57,38 @@
   box-sizing: border-box;
 }
 
+s-hero {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: var(--padding, 10px);
+  text-align: center;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+footer {
+  background-color: var(--color-appbar, #262335);
+  color: var(--color-text, #ffffff);
+  padding: var(--spacing-m);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.7rem;
+  color: rgb(156, 156, 156);
+}
+
 s-footer {
   display: flex;
   justify-content: center;
@@ -88,7 +119,7 @@ s-badge {
 }
 
 s-container {
-  max-width: 1000px;
+  max-width: var(--main-width, 1000px);
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -195,52 +226,11 @@ s-grid {
   gap: var(--spacing-m);
 }
 
-.overlay {
-  resize: both;
-}
-
-footer {
-  background-color: var(--color-appbar, #262335);
-  color: var(--color-text, #ffffff);
-  padding: var(--spacing-m);
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 0.7rem;
-  color: rgb(156, 156, 156);
-}
-
-header {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
-  padding: var(--padding, 10px);
-  text-align: center;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  line-height: 1.6;
-  margin: 0;
-}
-
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding-left: var(--spacing-l);
   padding-right: var(--spacing-l);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
 }
 
 /* Form elements - general styles */
